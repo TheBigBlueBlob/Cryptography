@@ -20,18 +20,21 @@ while answered == True:
         answered = False
         encrypt = True
         message = str(input("Message: "))
-        key = str(input("Key:"))
+        key = str(input("Key: "))
     elif request == "d":
         print("decrypt")
         answered = False
         decrypt = True
+        print("Message: " + encodedMessage)
     elif request == "q":
         print("Goodbye!")
         answered = False
     else:
         print("Did not understand command, try again.")
 
-
+charList = list(message)
+for a in charList:
+    print(associations.(a))
 
 
     
