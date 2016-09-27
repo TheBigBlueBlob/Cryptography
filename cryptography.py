@@ -1,7 +1,7 @@
 """
 cryptography.py
 Author: Liam S
-Credit: Vinzent
+Credit: Vinzent fof helping with a loop problem
 
 Assignment:
 
@@ -31,10 +31,15 @@ while answered == True:
         answered = False
     else:
         print("Did not understand command, try again.")
-
+newblankList = []
+blankList = []
 charList = list(message)
+print (charList)
 for a in charList:
-    print(associations.(a))
-
+    blankList.append(associations.find(a))
+print (blankList)
+for b in blankList:
+    newblankList.append(associations[b])
+print(newblankList)
 
     
