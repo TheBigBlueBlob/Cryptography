@@ -34,12 +34,16 @@ while answered == True:
 newblankList = []
 blankList = []
 charList = list(message)
-print (charList)
+keyList = list(key)
 for a in charList:
     blankList.append(associations.find(a))
-print (blankList)
+for c in keyList:
+    newblankList.append(associations.find(a))
+
+
+"""
 for b in blankList:
     newblankList.append(associations[b])
 print(newblankList)
-
+"""
     
