@@ -33,17 +33,22 @@ while answered == True:
         print("Did not understand command, try again.")
 newblankList = []
 blankList = []
+finalList = []
+newfinalList = []
 charList = list(message)
 keyList = list(key)
-for b in blankList:
-    newblankList.append(associations.find(b))
-for c in blankList:
+for b in charList:
+    blankList.append(associations.find(b))
+for c in keyList:
     newblankList.append(associations.find(c))
+length = len(blankList)
 counter = 0
-while counter < 2:
-    print(blankList[counter]+newblankList[counter])
+while counter < length:
+    finalList.append(blankList[counter]+newblankList[counter])
     counter += 1
-
+for z in finalList:
+    newfinalList.append(associations[z])
+print("".join(newfinalList))
 
 """
 for b in blankList:
