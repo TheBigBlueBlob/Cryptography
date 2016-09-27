@@ -35,10 +35,14 @@ newblankList = []
 blankList = []
 charList = list(message)
 keyList = list(key)
-for a in charList:
-    blankList.append(associations.find(a))
-for c in keyList:
-    newblankList.append(associations.find(a))
+for b in blankList:
+    newblankList.append(associations.find(b))
+for c in blankList:
+    newblankList.append(associations.find(c))
+counter = 0
+while counter < 2:
+    print(blankList[counter]+newblankList[counter])
+    counter += 1
 
 
 """
