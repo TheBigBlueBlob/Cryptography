@@ -19,27 +19,27 @@ while answered == True:
         message = str(input("Message: "))
         key = str(input("Key: "))
         newblankList = []
-blankList = []
-finalList = []
-newfinalList = []
-charList = list(message)
-keyList = list(key)
-for b in charList:
-    blankList.append(associations.find(b))
-for c in keyList:
-    newblankList.append(associations.find(c))
-length = len(blankList)
-length2 = len(newblankList)
-while length2 < length:
-    newblankList = newblankList+newblankList
-    length2 = len(newblankList)
-counter = 0
-while counter < length:
-    finalList.append(blankList[counter]+newblankList[counter])
-    counter += 1
-for z in finalList:
-    newfinalList.append(associations[z])
-print("".join(newfinalList))
+        blankList = []
+        finalList = []
+        newfinalList = []
+        charList = list(message)
+        keyList = list(key)
+        for b in charList:
+            blankList.append(associations.find(b))
+        for c in keyList:
+            newblankList.append(associations.find(c))
+        length = len(blankList)
+        length2 = len(newblankList)
+        while length2 < length:
+            newblankList = newblankList+newblankList
+            length2 = len(newblankList)
+        counter = 0
+        while counter < length:
+            finalList.append(blankList[counter]+newblankList[counter])
+            counter += 1
+        for z in finalList:
+            newfinalList.append(associations[z])
+        print("".join(newfinalList))
     elif request == "d":
         print("decrypt")
         answered = True
@@ -49,12 +49,3 @@ print("".join(newfinalList))
         answered = False
     else:
         print("Did not understand command, try again.")
-
-
-
-"""
-for b in blankList:
-    newblankList.append(associations[b])
-print(newblankList)
-"""
-    
