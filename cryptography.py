@@ -9,29 +9,16 @@ Write and submit a program that encrypts and decrypts user data.
 
 See the detailed requirements at https://github.com/HHS-IntroProgramming/Cryptography/blob/master/README.md
 """
-encrypt = False
-decrypt = False
 answered = True
 associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!"
 request = str(input("Enter e to encrypt, d to decrypt, or q to quit: "))
 while answered == True:
     if request == "e":
         print("encrypt")
-        answered = False
-        encrypt = True
+        answered = True
         message = str(input("Message: "))
         key = str(input("Key: "))
-    elif request == "d":
-        print("decrypt")
-        answered = False
-        decrypt = True
-        print("Message: " + encodedMessage)
-    elif request == "q":
-        print("Goodbye!")
-        answered = False
-    else:
-        print("Did not understand command, try again.")
-newblankList = []
+        newblankList = []
 blankList = []
 finalList = []
 newfinalList = []
@@ -45,6 +32,7 @@ length = len(blankList)
 length2 = len(newblankList)
 while length2 < length:
     newblankList = newblankList+newblankList
+    length2 = len(newblankList)
 counter = 0
 while counter < length:
     finalList.append(blankList[counter]+newblankList[counter])
@@ -52,6 +40,17 @@ while counter < length:
 for z in finalList:
     newfinalList.append(associations[z])
 print("".join(newfinalList))
+    elif request == "d":
+        print("decrypt")
+        answered = True
+        print("Message: " + encodedMessage)
+    elif request == "q":
+        print("Goodbye!")
+        answered = False
+    else:
+        print("Did not understand command, try again.")
+
+
 
 """
 for b in blankList:
