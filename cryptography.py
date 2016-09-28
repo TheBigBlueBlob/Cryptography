@@ -40,10 +40,11 @@ while answered == True:
         for z in finalList:
             newfinalList.append(associations[z])
         print("".join(newfinalList))
+        request = str(input("Enter e to encrypt, d to decrypt, or q to quit: "))
     elif request == "d":
         print("decrypt")
-        answered = True
-        print("Message: " + encodedMessage)
+        
+        request = str(input("Enter e to encrypt, d to decrypt, or q to quit: "))
     elif request == "q":
         print("Goodbye!")
         answered = False
