@@ -49,3 +49,4 @@ while answered == True:
         answered = False
     else:
         print("Did not understand command, try again.")
+        request = str(input("Enter e to encrypt, d to decrypt, or q to quit: "))
