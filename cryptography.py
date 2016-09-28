@@ -42,6 +42,9 @@ for b in charList:
 for c in keyList:
     newblankList.append(associations.find(c))
 length = len(blankList)
+length2 = len(newblankList)
+while length2 < length:
+    newblankList = newblankList+newblankList
 counter = 0
 while counter < length:
     finalList.append(blankList[counter]+newblankList[counter])
