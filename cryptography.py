@@ -43,7 +43,30 @@ while answered == True:
         request = str(input("Enter e to encrypt, d to decrypt, or q to quit: "))
     elif request == "d":
         print("decrypt")
-        
+        message2 = str(input("Message: "))
+        key2 = str(input("Key: "))
+        newblankList2 = []
+        blankList2 = []
+        finalList2 = []
+        newfinalList2 = []
+        charList2 = list(message2)
+        keyList2 = list(key2)
+        for b in charList2:
+            blankList2.append(associations.find(b))
+        for c in keyList2:
+            newblankList2.append(associations.find(c))
+        length4 = len(blankList2)
+        length3 = len(newblankList2)
+        while length3 < length4:
+            newblankList2 = newblankList2+newblankList2
+            length3 = len(newblankList2)
+        counter2 = 0
+        while counter2 < length4:
+            finalList.append(blankList2[counter2]+newblankList2[counter2])
+            counter2 += 1
+        for z in finalList2:
+            newfinalList2.append(associations[z])
+        print("".join(newfinalList2))
         request = str(input("Enter e to encrypt, d to decrypt, or q to quit: "))
     elif request == "q":
         print("Goodbye!")
