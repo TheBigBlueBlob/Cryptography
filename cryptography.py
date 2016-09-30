@@ -14,7 +14,6 @@ associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .
 request = str(input("Enter e to encrypt, d to decrypt, or q to quit: "))
 while answered == True:
     if request == "e":
-        print("encrypt")
         answered = True
         message = str(input("Message: "))
         key = str(input("Key: "))
@@ -42,7 +41,6 @@ while answered == True:
         print("".join(newfinalList))
         request = str(input("Enter e to encrypt, d to decrypt, or q to quit: "))
     elif request == "d":
-        print("decrypt")
         message2 = str(input("Message: "))
         key2 = str(input("Key: "))
         newblankList2 = []
