@@ -62,7 +62,7 @@ while answered == True:
             length3 = len(newblankList2)
         counter2 = 0
         while counter2 < length4:
-            finalList.append(blankList2[counter2]+newblankList2[counter2])
+            finalList2.append(blankList2[counter2]-newblankList2[counter2])
             counter2 += 1
         for z in finalList2:
             newfinalList2.append(associations[z])
