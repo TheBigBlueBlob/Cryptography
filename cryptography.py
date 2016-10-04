@@ -49,30 +49,39 @@ while answered == True:
         print("".join(newfinalList))
         request = str(input("Enter e to encrypt, d to decrypt, or q to quit: "))
     elif request == "d":
-        message2 = str(input("Message: "))
-        key2 = str(input("Key: "))
-        newblankList2 = []
-        blankList2 = []
-        finalList2 = []
-        newfinalList2 = []
-        charList2 = list(message2)
-        keyList2 = list(key2)
-        for b in charList2:
-            blankList2.append(associations.find(b))
-        for c in keyList2:
-            newblankList2.append(associations.find(c))
-        length4 = len(blankList2)
-        length3 = len(newblankList2)
-        while length3 < length4:
-            newblankList2 = newblankList2+newblankList2
-            length3 = len(newblankList2)
-        counter2 = 0
-        while counter2 < length4:
-            finalList2.append(blankList2[counter2]-newblankList2[counter2])
-            counter2 += 1
-        for z in finalList2:
-            newfinalList2.append(associations[z])
-        print("".join(newfinalList2))
+        answered = True
+        message = str(input("Message: "))
+        key = str(input("Key: "))
+        newblankList = []
+        blankList = []
+        finalList = []
+        newestfinalList = []
+        newfinalList = []
+        charList = list(message)
+        keyList = list(key)
+        for b in charList:
+            blankList.append(associations.find(b))
+        for c in keyList:
+            newblankList.append(associations.find(c))
+        length = len(blankList)
+        length2 = len(newblankList)
+        newnewblankList = newblankList
+        if length2 < length:
+            newnewblankList = newnewblankList+newblankList
+        length5 = len(newnewblankList)
+        if length5 > length:
+            del newnewblankList[length+1:]
+        counter = 0
+        while counter < length:
+            finalList.append(blankList[counter]-newnewblankList[counter])
+            counter += 1
+        for y in finalList:
+            if y > 84:
+                y = y - 84
+            newestfinalList.append(y)
+        for z in newestfinalList:
+            newfinalList.append(associations[z])
+        print("".join(newfinalList))
         request = str(input("Enter e to encrypt, d to decrypt, or q to quit: "))
     elif request == "q":
         print("Goodbye!")
