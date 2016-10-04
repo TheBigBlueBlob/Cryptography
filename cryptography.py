@@ -29,6 +29,7 @@ while answered == True:
             newblankList.append(associations.find(c))
         length = len(blankList)
         length2 = len(newblankList)
+        newnewblankList = newblankList
         if length2 < length:
             newnewblankList = newnewblankList+newblankList
         length5 = len(newnewblankList)
