@@ -1,7 +1,7 @@
 """
 cryptography.py
 Author: Liam S
-Credit: Vinzent fof helping with a loop problem
+Credit: Vinzent for helping with a loop problem and smartness
 
 Assignment:
 
@@ -34,11 +34,12 @@ while answered == True:
             newnewblankList = newnewblankList+newblankList
         length5 = len(newnewblankList)
         if length5 > length:
-            newnewblankList.remove[length+1:]
+            del newnewblankList[length+1:]
         counter = 0
         while counter < length:
             finalList.append(blankList[counter]+newnewblankList[counter])
             counter += 1
+        print(list(finalList))
         for z in finalList:
             newfinalList.append(associations[z])
         print("".join(newfinalList))
