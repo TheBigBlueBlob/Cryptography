@@ -20,6 +20,7 @@ while answered == True:
         newblankList = []
         blankList = []
         finalList = []
+        newestfinalList = []
         newfinalList = []
         charList = list(message)
         keyList = list(key)
@@ -39,12 +40,11 @@ while answered == True:
         while counter < length:
             finalList.append(blankList[counter]+newnewblankList[counter])
             counter += 1
-        print(list(finalList))
         for y in finalList:
             if y > 84:
                 y = y - 84
-        
-        for z in finalList:
+            newestfinalList.append(y)
+        for z in newestfinalList:
             newfinalList.append(associations[z])
         print("".join(newfinalList))
         request = str(input("Enter e to encrypt, d to decrypt, or q to quit: "))
