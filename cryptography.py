@@ -29,12 +29,14 @@ while answered == True:
             newblankList.append(associations.find(c))
         length = len(blankList)
         length2 = len(newblankList)
-        while length2 < length:
-            newblankList = newblankList+newblankList
-            length2 = len(newblankList)
+        if length2 < length:
+            newnewblankList = newnewblankList+newblankList
+        length5 = len(newnewblankList)
+        if length5 > length:
+            newnewblankList.remove[length+1:]
         counter = 0
         while counter < length:
-            finalList.append(blankList[counter]+newblankList[counter])
+            finalList.append(blankList[counter]+newnewblankList[counter])
             counter += 1
         for z in finalList:
             newfinalList.append(associations[z])
