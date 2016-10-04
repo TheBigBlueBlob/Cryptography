@@ -40,6 +40,10 @@ while answered == True:
             finalList.append(blankList[counter]+newnewblankList[counter])
             counter += 1
         print(list(finalList))
+        for y in finalList:
+            if y > 84:
+                y = y - 84
+        
         for z in finalList:
             newfinalList.append(associations[z])
         print("".join(newfinalList))
