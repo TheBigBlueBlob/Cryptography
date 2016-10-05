@@ -38,8 +38,6 @@ while answered == True:
         if length5 > length:
             del newnewblankList[length+1:]
         counter = 0
-        print(list(blankList))
-        print(list(newnewblankList))
         while counter < length:
             finalList.append(blankList[counter]+newnewblankList[counter])
             counter += 1
@@ -69,8 +67,9 @@ while answered == True:
         length = len(blankList)
         length2 = len(newblankList)
         newnewblankList = newblankList
-        if length2 < length:
-            newnewblankList = newnewblankList+newblankList
+        while length2 < length:
+            newnewblankList = newnewblankList+newnewblankList
+            length2 = len(newnewblankList)
         length5 = len(newnewblankList)
         if length5 > length:
             del newnewblankList[length+1:]
