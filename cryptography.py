@@ -41,10 +41,10 @@ while answered == True:
         while counter < length:
             finalList.append(blankList[counter]+newnewblankList[counter])
             counter += 1
-        for y in finalList:
-            if y > 84:
-                y = y - 84
-            newestfinalList.append(y)
+        for lel in finalList:
+            if lel > 84:
+                lel = lel - 85
+            newestfinalList.append(lel)
         for z in newestfinalList:
             newfinalList.append(associations[z])
         print("".join(newfinalList))
@@ -77,11 +77,7 @@ while answered == True:
         while counter < length:
             finalList.append(blankList[counter]-newnewblankList[counter])
             counter += 1
-        for y in finalList:
-            if y > 84:
-                y = y - 84
-            newestfinalList.append(y)
-        for z in newestfinalList:
+        for z in finalList:
             newfinalList.append(associations[z])
         print("".join(newfinalList))
         request = str(input("Enter e to encrypt, d to decrypt, or q to quit: "))
